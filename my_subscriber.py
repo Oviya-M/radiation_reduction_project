@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from image_transport_py import ImageTransport
+from sensor_msgs.msg import CompressedImage
 from cv_bridge import CvBridge, CvBridgeError
 import cv2
 import numpy as np
@@ -11,6 +11,9 @@ class MySubscriber(Node):
     def __init__(self):
         super().__init__('my_subscriber')
         self.bridge = CvBridge()
+        # add image_topic variable, change camera name 
+        # image_sub = self.create_subscription(CompressedImage, 'camera/image', self.image_callback, 10)
+        # get rid of image_transport
 
         image_transport = ImageTransport(
             node=self, name='imagetransport_sub', image_transport='compressed'
