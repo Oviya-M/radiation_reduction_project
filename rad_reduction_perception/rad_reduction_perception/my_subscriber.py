@@ -30,14 +30,16 @@ class MySubscriber(Node):
 
 
     def image_callback(self, msg):
-        try:
-            self.cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        except CvBridgeError as e:
-            self.get_logger().error(f'CvBridge Error: {e}')
-            return
+    try:
+        # Convert from CompressedImage to cv::Mat
+        np_arr = np.frombuffer(msg.data, np.uint8)
+        self.cv_image = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+    except Exception as e:
+        self.get_logger().error(f"Image decode failed: {e}")
+        return
 
-        if self.cv_image.shape[1] > 60 and self.cv_image.shape[0] > 60:
-            cv2.circle(self.cv_image, (50, 50), 10, (0, 255, 0), -1)
+    if self.cv_image is not None and self.cv_image.shape[1] > 60 and self.cv_image.shape[0] > 60:
+        cv2.circle(self.cv_image, (50, 50), 10, (0, 255, 0), -1)
 
         # ArUco marker detection code commented out
         """
