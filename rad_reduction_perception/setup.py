@@ -24,6 +24,7 @@ setup(
     'console_scripts': [
         'my_subscriber = rad_reduction_perception.my_subscriber:main',
         'publisher = rad_reduction_perception.publisher:main',
+        'test_publisher = rad_reduction_perception.test_publisher:main'
     ],
 },
 
