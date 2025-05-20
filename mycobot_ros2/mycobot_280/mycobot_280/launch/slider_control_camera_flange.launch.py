@@ -76,6 +76,8 @@ def generate_launch_description():
         arguments=['-d', LaunchConfiguration("rvizconfig")],
     )
     res.append(rviz_node)
+
+
     
     slider_control_node = Node(
         package="mycobot_280",

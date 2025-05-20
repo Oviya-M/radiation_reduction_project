@@ -1,0 +1,20 @@
+# Move-It Servo parameters for myCobot 280
+moveit_servo:
+  planning_frame: g_base
+  ee_frame_name: camera_flange                 # tip link in your URDF
+  command_in_type: pose
+  scale:
+    linear: 0.3                       # m/s  (tweak if arm jitters)
+    rotational: 0.8                    # rad/s
+  publish_period: 0.01                 # 100 Hz command stream
+  incoming_command_timeout: 0.1
+  num_outgoing_halt_msgs_to_publish: 4
+  status_topic: /servo_node/status
+  use_gazebo: false
+  # Low-pass filter
+  low_pass_filter_coeff: 2.0
+  # Joint limits safety
+  joint_limit_margin: 0.1
+  # Collision checking (needs a planning scene monitor)
+  check_collisions: false
+  start_state_max_bounds_error: 0.1

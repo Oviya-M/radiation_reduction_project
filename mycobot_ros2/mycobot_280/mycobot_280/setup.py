@@ -30,9 +30,15 @@ with open("setup.cfg", "w") as f:
 data_files = [
     ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ('share/' + package_name, ['package.xml']),
-    (os.path.join('share', package_name, "launch"), glob('launch/*.launch.py')),
-    (os.path.join('share', package_name, "config"), glob('config/*')),
+
+    # launch & config live inside the inner mycobot_280 directory
+    ('share/' + package_name + '/launch', glob('mycobot_280/launch/*.launch.py')),
+    ('share/' + package_name + '/config', glob('mycobot_280/config/*')),
+
+    # if you want URDF/xacro files installed too
+    ('share/' + package_name + '/urdf',  glob('mycobot_280/urdf/*')),
 ]
+
 
 setup(
     name=package_name,
