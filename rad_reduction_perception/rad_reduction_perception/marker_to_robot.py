@@ -5,7 +5,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from tf2_ros import Buffer, TransformListener
-from moveit_commander import MoveGroupCommander as MoveGroupInterface
+#from moveit_commander import MoveGroupCommander as MoveGroupInterface
 
 MARKER_ID = 42
 MARKER_TOPIC = "/aruco/poses"
@@ -18,7 +18,7 @@ class MarkerFollower(Node):
         super().__init__("marker_follower")
         self.tf_buf = Buffer()
         TransformListener(self.tf_buf, self)
-        self.moveit = MoveGroupInterface("mycobot_arm", EEF_LINK, self)
+        self.moveit = MoveGroupInterface("arm_group", EEF_LINK, self)
         self.sub = self.create_subscription(PoseStamped, MARKER_TOPIC, self.cb, 10)
         self.get_logger().info("Waiting for marker…")
 

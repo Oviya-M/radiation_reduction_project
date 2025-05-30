@@ -28,6 +28,8 @@ setup(
         "publisher       = rad_reduction_perception.publisher:main",
         "test_publisher  = rad_reduction_perception.test_publisher:main",
         "marker_to_robot = rad_reduction_perception.marker_to_robot:main",
+        "visualize_reachability = rad_reduction_perception.visualize_reachability:main",
+        "current_pose = rad_reduction_perception.current_pose:main",
     ],
 },
 

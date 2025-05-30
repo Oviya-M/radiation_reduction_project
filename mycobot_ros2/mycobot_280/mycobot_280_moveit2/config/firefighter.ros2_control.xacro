@@ -51,6 +51,28 @@
                 <state_interface name="velocity"/>
             </joint>
 
+            <!-- <joint name="camera_flange_to_needle">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['camera_flange_to_needle']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint> -->
+            <!-- <joint name="world_to_table">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['world_to_table']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="table_to_base">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['table_to_base']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint> -->
+
         </ros2_control>
     </xacro:macro>
 </robot>

@@ -141,13 +141,27 @@
       </geometry>
     <origin xyz = "0.024 0.0 -0.008" rpy = " -1.5708 3.14159 0"/>
     </visual>
-    <collision>
+    <!-- <collision>
       <geometry>
        <mesh filename="package://mycobot_description/urdf/mycobot_280_m5/camera_flange.dae"/>
       </geometry>
     <origin xyz = "0.024 -0.008 0.0 " rpy = " -1.5708 3.14159 0"/>
-    </collision>
+    </collision> -->
   </link>
+
+ <!-- <link name="needle">
+   <visual>
+     <geometry>
+       <cylinder length="0.2" radius="0.0185"/>
+     </geometry>
+   </visual>
+   <collision>
+     <geometry>
+       <cylinder length="0.2" radius="0.0185"/>
+     </geometry>
+   <origin xyz = "0.024 -0.008 0.0 " rpy = " -1.5708 3.14159 0"/>
+   </collision>
+ </link> -->
 
 
   <joint name="g_base_to_joint1" type="fixed">
@@ -218,5 +232,10 @@
     <origin xyz= "0 0 0.01" rpy = "0 0 0"/>  
   </joint>
 
-</robot>
+  </robot>
+
+
+  
+
+
 

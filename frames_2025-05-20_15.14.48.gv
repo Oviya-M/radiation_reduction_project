@@ -1,0 +1,14 @@
+digraph G {
+"world" -> "g_base"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"joint1" -> "joint2"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+"g_base" -> "joint1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"joint2" -> "joint3"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+"joint3" -> "joint4"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+"joint4" -> "joint5"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+"joint5" -> "joint6"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+"joint6" -> "joint6_flange"[label=" Broadcaster: default_authority\nAverage rate: 14.555\nBuffer length: 3.71\nMost recent transform: 1747779288.686342\nOldest transform: 1747779284.976347\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1747779288.720388"[ shape=plaintext ] ;
+}->"world";
+}

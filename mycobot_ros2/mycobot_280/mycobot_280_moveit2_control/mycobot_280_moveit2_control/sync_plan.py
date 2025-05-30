@@ -53,6 +53,8 @@ class Slider_Subscriber(Node):
         ]
 
     def listener_callback(self, msg):
+        msg.header.frame_id = 'joint6_flange' # WE ADDED THIS
+
         # 创建字典将关节名称与位置值关联
         joint_state_dict = {name: msg.position[i] for i, name in enumerate(msg.name)}
         # 根据 RViz 顺序重新排列关节角度
@@ -64,6 +66,7 @@ class Slider_Subscriber(Node):
                 data_list.append(radians_to_angles)
  
         print('data_list: {}'.format(data_list))
+        
         self.mc.send_angles(data_list, 35)
 
 

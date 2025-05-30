@@ -17,3 +17,6 @@ moveit_simple_controller_manager:
       - joint5_to_joint4
       - joint6_to_joint5
       - joint6output_to_joint6
+      # - camera_flange_to_needle
+      # - world_to_table
+      # - table_to_base

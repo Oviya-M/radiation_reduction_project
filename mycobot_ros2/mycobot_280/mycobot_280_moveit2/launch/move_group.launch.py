@@ -43,6 +43,7 @@ def generate_launch_description():
             servo_params,
         ],
         output="screen",
+        arguments=["--ros-args", "--log-level", "moveit_servo:=debug"]
     )
 
     ld.add_action(servo_node)
