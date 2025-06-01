@@ -11,31 +11,33 @@ Our project builds on top of [Elephant Robotics' ROS2 support for the MyCobot 28
 
 Navigate to your workspace’s `src` folder and clone the upstream code:
 
-```bash
+```
 cd ~/ct_bio/src
 git clone https://github.com/elephantrobotics/mycobot_ros2.git
+```
 
 ---
 
 ## 🔄 Syncing with GitHub
 
-```bash
+```
 cd ~/ct_bio
 git add .
 git commit -m "your message"
 git pull --rebase origin main
 git push origin main
+```
 
 ---
 
 ## ⚙️ Setting Up the Workspace
 
-```bash
+```
 mkdir -p ~/ct_bio/src
 cd ~/ct_bio
 colcon build --symlink-install
 source install/setup.bash
-
+```
 ---
 
 ## ✅ Prerequisites
