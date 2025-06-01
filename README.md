@@ -40,6 +40,18 @@ source install/setup.bash
 ```
 ---
 
+## 🧵 Speeding Up Builds with Parallel Workers
+
+To accelerate the `colcon build` process, especially on machines with multiple cores, you can use the `--parallel-workers` flag.
+
+## 🔄 Example
+
+```
+colcon build --symlink-install --parallel-workers
+```
+
+---
+
 ## ✅ Prerequisites
 
 Ensure the following are properly installed and configured:
