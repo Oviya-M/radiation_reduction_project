@@ -3,6 +3,36 @@
 
 This document outlines how to replicate the ROS 2-based perception and control pipeline developed for the Elephant Robotics MyCobot 280 M5Stack robotic arm. This setup supports ArUco marker detection, MoveIt2-based motion planning, and real-time servo control.
 
+## 🐘 Cloning & Modifying the Elephant Robotics ROS2 Repository
+
+Our project builds on top of [Elephant Robotics' ROS2 support for the MyCobot 280 M5Stack](https://github.com/elephantrobotics/mycobot_ros2), which includes MoveIt2 integration and launch files for control interfaces.
+
+## 📥 Clone the Repository
+
+Navigate to your workspace’s `src` folder and clone the upstream code:
+
+cd ~/ct_bio/src
+git clone https://github.com/elephantrobotics/mycobot_ros2.git
+
+---
+
+## 🔄 Syncing with GitHub
+
+cd ~/ct_bio
+git add .
+git commit -m "your message"
+git pull --rebase origin main
+git push origin main
+
+---
+
+## ⚙️ Setting Up the Workspace
+
+mkdir -p ~/ct_bio/src
+cd ~/ct_bio
+colcon build --symlink-install
+source install/setup.bash
+
 ---
 
 ## ✅ Prerequisites
