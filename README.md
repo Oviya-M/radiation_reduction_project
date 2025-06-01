@@ -19,6 +19,7 @@ git clone https://github.com/elephantrobotics/mycobot_ros2.git
 
 ## 🔄 Syncing with GitHub
 
+```bash
 cd ~/ct_bio
 git add .
 git commit -m "your message"
@@ -29,6 +30,7 @@ git push origin main
 
 ## ⚙️ Setting Up the Workspace
 
+```bash
 mkdir -p ~/ct_bio/src
 cd ~/ct_bio
 colcon build --symlink-install
