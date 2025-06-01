@@ -165,7 +165,7 @@ source ~/ct_bio/install/setup.bash
 ## Old Repo:
 https://github.com/smw59/ct_bio/tree/main
 
-## Elephant Robotics ROS2 GitHub for MyCobot280_M5
+## Elephant Robotics ROS2 GitHub for MyCobot280_M5:
 https://github.com/elephantrobotics/mycobot_docs/blob/main/mycobot_280_M5(2023)en/3-FunctionsAndApplications/6.developmentGuide/ROS/12.2-ROS2/12.2.3-ROS2Introduction.md
 
 
