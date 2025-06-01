@@ -269,7 +269,7 @@ class MySubscriber(Node):
                 goal_y /= np.linalg.norm(goal_y)
                 goal_z /= np.linalg.norm(goal_z)
 
-                # 4. Build new goal pose in g_base with 5cm offset
+                # 4. Build new goal pose in g_base with 50 cm offset
                 offset = -0.5
                 T_gb_g = np.eye(4)
                 T_gb_g[:3, 0] = goal_x
